@@ -1,15 +1,9 @@
 import Timer from "../components/Timer";
 import * as actions from "../actions/timer";
 
-import {TimerState} from "../reducers/timer";
+
 import {connect, Dispatch} from "react-redux";
 
-export function mapStateToProps({currentSeconds, currentMilis }: TimerState) {
-    return {
-      currentSeconds,
-      currentMilis
-    }
-  }
   
   export function mapDispatchToProps(dispatch: Dispatch<actions.TimerActions>) {
     let updater : number ;
@@ -45,4 +39,4 @@ export function mapStateToProps({currentSeconds, currentMilis }: TimerState) {
     }
   }
   
-  export default connect(mapStateToProps, mapDispatchToProps)(Timer);
+  export default connect(() =>{}, mapDispatchToProps)(Timer);

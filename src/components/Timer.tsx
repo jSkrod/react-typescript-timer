@@ -13,7 +13,7 @@ interface TimerProps{
     resetTimer: () => void;
 }
 
-const decoratedCount = (props : TimerProps) =>(
+const Timer = (props : TimerProps) =>(
         <Grid container 
         direction="column"
         justify='center'
@@ -30,4 +30,4 @@ const decoratedCount = (props : TimerProps) =>(
 ); 
     
 
-export default decoratedCount;
+export default Timer;
